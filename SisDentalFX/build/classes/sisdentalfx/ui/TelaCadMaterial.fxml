@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="450.0" maxWidth="645.0" minHeight="450.0" minWidth="645.0" prefHeight="450.0" prefWidth="645.0" spacing="2.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisdentalfx.ui.TelaCadMaterialController">
+   <children>
+      <HBox prefHeight="225.0" prefWidth="641.0" spacing="2.0">
+         <children>
+            <HBox prefHeight="225.0" prefWidth="525.0">
+               <children>
+                  <AnchorPane fx:id="pnDados" prefHeight="232.0" prefWidth="525.0" style="-fx-background-color: #F0F8FF;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="57.0" text="Descrição:" />
+                        <Label layoutX="11.0" layoutY="164.0" text="Preço:" />
+                        <Label layoutX="13.0" layoutY="6.0" text="Código:" />
+                        <TextField fx:id="tfCodigo" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="67.0" />
+                        <TextField fx:id="tfPreco" layoutX="10.0" layoutY="181.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TextArea fx:id="tfDescricao" layoutX="15.0" layoutY="81.0" prefHeight="82.0" prefWidth="498.0" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="200.0" prefWidth="123.0" style="-fx-background-color: #F0F8FF;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="110.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btNovo" mnemonicParsing="false" onAction="#evtBtNovo" prefHeight="30.0" prefWidth="90.0" text="Novo" />
+                        <Button fx:id="btAlterar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtBtAlterar" prefHeight="30.0" prefWidth="90.0" text="Alterar" />
+                        <Button fx:id="btApagar" mnemonicParsing="false" onAction="#evtBtApagar" prefHeight="30.0" prefWidth="90.0" text="Apagar" />
+                        <Button fx:id="btConfirmar" mnemonicParsing="false" onAction="#evtBtConfirmar" prefHeight="30.0" prefWidth="90.0" text="Confirmar" />
+                        <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#evtCancelar" prefHeight="30.0" prefWidth="90.0" text="Cancelar" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="641.0" spacing="10.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <TextField fx:id="tfBuscar" prefHeight="25.0" prefWidth="264.0" promptText="Buscar" />
+            <Button fx:id="btBuscar" mnemonicParsing="false" onAction="#evtBtBuscar" prefWidth="90.0" text="Buscar" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" onMouseClicked="#evtTable" prefHeight="200.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="67.0" text="Código" />
+            <TableColumn fx:id="colDescricao" prefWidth="456.0" text="Descrição" />
+            <TableColumn fx:id="colPreco" prefWidth="121.0" text="Preço" />
+         </columns>
+      </TableView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

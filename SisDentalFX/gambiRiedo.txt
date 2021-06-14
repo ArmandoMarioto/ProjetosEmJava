@@ -1,0 +1,11 @@
+/*for (int i = 0; i < con.getConsulta().getMateriais().size(); i++) 
+           if(con.getConsulta().getMateriais().get(i).getMaterial().getDescricao().equals(cbMaterial.getSelectionModel().getSelectedItem().getDescricao()))
+           {
+               con.getConsulta().getMateriais().get(i).setQtd(con.getConsulta().getMateriais().get(i).getQtd()+spMaterial.getValue());
+                carregaTabelaMaterial();
+               return;
+           }
+        
+       con.getConsulta().addMaterial(cbMaterial.getSelectionModel().getSelectedItem(), spMaterial.getValue());
+        
+       carregaTabelaMaterial();*/

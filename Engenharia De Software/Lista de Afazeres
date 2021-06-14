@@ -1,0 +1,19 @@
+Identificação de Recursos: Produto(Peça),Veiculo(manutenção)
+
+Quantificar Recurso:Esta parcialmente feito, falta controle de estoque. Mudar atributo Lote na classe Produto
+para um objeto.
+
+Armazenar Recurso: Fazer classes estoque,
+mas não possui filial nem armazem separado, portanto nao possui essas classes
+
+Manter Recurso: Implemetar o padrão manter recurso, porem sem classe origem e fazendo classe VEICULO 
+AUTOMOTIVO E COM MOTOR.
+
+Idetificar peças da manutenção: identificar quais peças seram utilizadas para a manutenção, deve ser 
+implementada no orçamento
+
+Sigleton: já corrigido
+
+Façade: verificar se funciona separadamente.
+
+Observer: q isso?

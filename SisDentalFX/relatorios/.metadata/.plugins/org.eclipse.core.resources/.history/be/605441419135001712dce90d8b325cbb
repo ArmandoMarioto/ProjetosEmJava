@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-10T11:46:40 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_cidades" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c5ebec59-ed43-487e-9fa7-78fdac87e700">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZXN0YWRvICwxNjAsMTUsNDEyMmQ4ZjktNWM3NC00YmYwLTgzYmItZDhmMGY4Y2QyMTZjO2NpZGFk&#xA;ZSAsMTUsMTUsZjE2NTcyMDktMmViNC00ZDkyLTgxNTctYjFlZmZjOTdhMjg1Ow=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sisdental"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM cidade,
+	estado
+WHERE 
+	 cidade.est_cod = estado.est_cod 
+ORDER BY estado.est_sgl]]>
+	</queryString>
+	<field name="cid_cod" class="java.lang.Integer"/>
+	<field name="cid_nome" class="java.lang.String"/>
+	<field name="est_sgl" class="java.lang.String"/>
+	<group name="est_sgl">
+		<groupExpression><![CDATA[$F{est_sgl}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

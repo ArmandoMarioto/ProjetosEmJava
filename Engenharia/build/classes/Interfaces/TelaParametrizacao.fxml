@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.TelaParametrizacaoController">
+    <children>
+        <Text layoutX="44.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Fantasia:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfNomeFantasia" layoutX="197.0" layoutY="25.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="44.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Razão Social:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfRazaoSocial" layoutX="197.0" layoutY="65.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="44.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logo Grande:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXButton fx:id="btLogoGrande" layoutX="197.0" layoutY="119.0" onAction="#evtLogoGrande" prefHeight="26.0" prefWidth="277.0" style="-fx-background-color: #0076A3;" text="Carregar Logo  *" />
+        <Text layoutX="46.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logo Pequeno:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXButton fx:id="btLogoPequeno" layoutX="199.0" layoutY="162.0" onAction="#evtLogoPequeno" prefHeight="26.0" prefWidth="277.0" style="-fx-background-color: #0076A3;" text="Carregar Logo  *" />
+        <Text layoutX="44.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfEndereco" layoutX="197.0" layoutY="207.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="46.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor de Fundo:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfCorFundo" layoutX="199.0" layoutY="254.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="46.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fonte:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfFonte" layoutX="199.0" layoutY="293.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="46.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Site:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfSite" layoutX="199.0" layoutY="337.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="46.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfEmail" layoutX="199.0" layoutY="373.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <Text layoutX="46.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fone:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <JFXTextField fx:id="tfFone" layoutX="199.0" layoutY="414.0" prefHeight="26.0" prefWidth="277.0" promptText="Obrigatório*" />
+        <JFXButton fx:id="btSalvar" buttonType="RAISED" contentDisplay="CENTER" layoutX="199.0" layoutY="461.0" onAction="#evtSalvar" prefHeight="26.0" prefWidth="277.0" ripplerFill="#0b05b0" style="-fx-background-color: #0076A3;" text="Salvar" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" />
+        <ImageView fx:id="imgview" fitHeight="171.0" fitWidth="220.0" layoutX="532.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="imgview2" fitHeight="144.0" fitWidth="220.0" layoutX="533.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="601.0" layoutY="57.0" text="Logo Grande" />
+        <Label layoutX="596.0" layoutY="269.0" text="Logo Pequeno" />
+    </children>
+</AnchorPane>

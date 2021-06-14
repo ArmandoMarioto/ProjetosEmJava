@@ -1,0 +1,66 @@
+.jfx-tab-pane .headers-region 
+{
+    -fx-background-color: /*#1b75bc*/#000000;
+}
+.jfx-tab-pane .tab-header-background 
+{
+    -fx-background-color: /*#1b75bc*/#000000;
+}
+.jfx-tab-pane .tab-selected-line 
+{
+    -fx-stroke: #75bc1b;
+    -fx-stroke-width: 3pt;
+}
+.jfx-button 
+{
+    -jfx-button-type: RAISED;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+/*incerteza*/
+
+.table-view:focused
+{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected 
+{
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.TelaGenOrcamentoController">
+    <center>
+        <VBox alignment="CENTER" prefHeight="583.0" prefWidth="1124.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="573.0" prefWidth="1101.0">
+                    <children>
+                        <AnchorPane fx:id="pndado" prefHeight="573.0" prefWidth="991.0">
+                            <children>
+                                <JFXTextField fx:id="txcodigo" disable="true" editable="false" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="10.0" prefHeight="31.0" prefWidth="138.0" promptText="Código" />
+                                <JFXDatePicker fx:id="dtorcamento" focusTraversable="false" layoutX="224.0" layoutY="17.0" onAction="#evtmudaData" promptText="Data do Orçamento(*)" />
+                                <JFXDatePicker fx:id="dtvalidade" focusTraversable="false" layoutX="224.0" layoutY="54.0" onAction="#evtmudaData2" promptText="Validade(*)" />
+                                <HBox alignment="CENTER" layoutX="829.0" layoutY="335.0" prefHeight="31.0" prefWidth="142.0" spacing="10.0">
+                                    <children>
+                                        <Label text="Total(*):" />
+                                        <Label fx:id="lbltotal" text="0" />
+                                    </children>
+                                </HBox>
+                                <JFXTextArea fx:id="txobs" focusTraversable="false" labelFloat="true" layoutX="12.0" layoutY="120.0" prefHeight="162.0" prefWidth="163.0" promptText="Observação Sobre Forma de Pagamento" />
+                                <JFXTextField fx:id="txfuncionario" disable="true" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="55.0" prefHeight="31.0" prefWidth="204.0" promptText="Funcionário(*)" />
+                                <TabPane layoutX="496.0" layoutY="17.0" prefHeight="318.0" prefWidth="489.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Produto">
+                                            <content>
+                                                <AnchorPane prefHeight="289.0" prefWidth="400.0" style="-fx-border-color: black;">
+                                                    <children>
+                                                        <JFXTextField fx:id="txquantidadeproduto" focusTraversable="false" layoutX="14.0" layoutY="164.0" prefHeight="31.0" prefWidth="102.0" promptText="Quantidade(*)" />
+                                                        <JFXTextField fx:id="txvalorproduto" focusTraversable="false" layoutX="150.0" layoutY="164.0" prefHeight="31.0" prefWidth="108.0" promptText="Valor(*)" />
+                                                        <TableView fx:id="tabelaProduto" layoutX="5.0" layoutY="1.0" onMouseClicked="#evtClickTableProduto" prefHeight="156.0" prefWidth="481.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="colTPproduto" prefWidth="257.0" text="Produto" />
+                                                                <TableColumn fx:id="colTPquantidade" prefWidth="123.0" text="Quantidade" />
+                                                                <TableColumn fx:id="colTPvalor" prefWidth="105.0" text="Valor" />
+                                                            </columns>
+                                                        </TableView>
+                                                          <JFXButton focusTraversable="false" layoutX="8.0" layoutY="218.0" onAction="#evtAdicionaProduto" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Adicionar" />
+                                                          <JFXButton focusTraversable="false" layoutX="117.0" layoutY="218.0" onAction="#evtRemoveProduto" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Remover" />
+                                                          <JFXButton focusTraversable="false" layoutX="229.0" layoutY="218.0" onAction="#evtalterarProduto" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Alterar" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Serviço">
+                                            <content>
+                                                <AnchorPane prefHeight="144.0" prefWidth="427.0" style="-fx-border-color: black;">
+                                                    <children>
+                                                        <JFXTextField fx:id="txquantidadeservico" focusTraversable="false" layoutX="14.0" layoutY="176.0" prefHeight="31.0" prefWidth="102.0" promptText="Quantidade(*)" />
+                                                        <JFXTextField fx:id="txvalorservico" focusTraversable="false" layoutX="138.0" layoutY="176.0" prefHeight="31.0" prefWidth="108.0" promptText="Valor(*)" />
+                                                        <TableView fx:id="TabelaServico" onMouseClicked="#evtClickTableServico" prefHeight="157.0" prefWidth="491.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="colTSservico" prefWidth="297.0" text="Servico" />
+                                                                <TableColumn fx:id="colTSquantidade" prefWidth="107.0" text="Quantidade" />
+                                                                <TableColumn fx:id="colTSvalor" prefWidth="86.0" text="Valor" />
+                                                            </columns>
+                                                        </TableView>
+                                                          <JFXButton focusTraversable="false" layoutX="14.0" layoutY="232.0" onAction="#evtAdicionaServico" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Adicionar" />
+                                                          <JFXButton focusTraversable="false" layoutX="120.0" layoutY="232.0" onAction="#evtRemoveServico" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Remover" />
+                                                          <JFXButton focusTraversable="false" layoutX="231.0" layoutY="232.0" onAction="#evtalterarServico" prefWidth="90.0" style="-fx-background-color: #0076A3;" text="Alterar" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                                  <HBox alignment="CENTER_LEFT" layoutX="224.0" layoutY="82.0" prefHeight="57.0" prefWidth="261.0" spacing="15.0">
+                                      <children>
+                                          <JFXTextField fx:id="txcpf" focusTraversable="false" labelFloat="true" promptText="CPF(*)" />
+                                          <JFXButton focusTraversable="false" onAction="#evtBuscaCliente" style="-fx-background-color: #0076A3;" text="Buscar" />
+                                      </children>
+                                  </HBox>
+                                  <HBox alignment="CENTER_LEFT" layoutX="224.0" layoutY="134.0" prefHeight="50.0" prefWidth="272.0" spacing="15.0">
+                                      <children>
+                                          <JFXTextField fx:id="txcodigocliente" disable="true" editable="false" focusTraversable="false" labelFloat="true" promptText="Código" />
+                                          <JFXTextField fx:id="txnomecliente" disable="true" editable="false" focusTraversable="false" labelFloat="true" prefHeight="31.0" prefWidth="170.0" promptText="Nome" />
+                                      </children>
+                                  </HBox>
+                                  <HBox alignment="CENTER_LEFT" layoutX="224.0" layoutY="188.0" prefHeight="55.0" prefWidth="187.0">
+                                      <children>
+                                          <JFXTextField fx:id="txrgcliente" disable="true" editable="false" focusTraversable="false" labelFloat="true" promptText="RG:" />
+                                      </children>
+                                  </HBox>
+                            <JFXButton fx:id="btnovo" focusTraversable="false" layoutX="44.0" layoutY="387.0" onAction="#evtNovo" prefWidth="100.0" style="-fx-background-color: #0076A3;" text="Novo" />
+                            <JFXButton fx:id="btalterar" focusTraversable="false" layoutX="152.0" layoutY="387.0" onAction="#evtAlterar" prefWidth="100.0" style="-fx-background-color: #0076A3;" text="Alterar" />
+                            <JFXButton fx:id="btconfirmar" focusTraversable="false" layoutX="265.0" layoutY="387.0" onAction="#evtConfirmar" prefWidth="100.0" style="-fx-background-color: #0076A3;" text="Confirmar" />
+                            <JFXButton fx:id="btexcluir" focusTraversable="false" layoutX="374.0" layoutY="387.0" onAction="#evtExcluir" prefWidth="100.0" style="-fx-background-color: #0076A3;" text="Excluir" />
+                            <JFXButton fx:id="btcancelar" focusTraversable="false" layoutX="485.0" layoutY="387.0" onAction="#evtCancelar" prefWidth="100.0" style="-fx-background-color: #0076A3;" text="Cancelar" />
+                        <Label fx:id="lerroCliente" layoutX="234.0" layoutY="253.0" visible="false" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="59.0" prefWidth="1124.0" spacing="25.0">
+                    <children>
+                        <JFXTextField fx:id="txBusca" focusTraversable="false" />
+                        <JFXComboBox fx:id="cbbusca" focusTraversable="false" prefHeight="31.0" prefWidth="112.0" promptText="Chave" />
+                        <JFXButton focusTraversable="false" onAction="#evtBusca" style="-fx-background-color: #0076A3;" text="Busca" />
+                    </children>
+                </HBox>
+                <TableView fx:id="tabela" onMouseClicked="#evtClickInTable" prefHeight="332.0" prefWidth="1124.0">
+                    <columns>
+                        <TableColumn fx:id="colfuncionario" prefWidth="301.0" text="Funcionario" />
+                        <TableColumn fx:id="colcliente" prefWidth="320.0" text="Cliente" />
+                        <TableColumn fx:id="coldtorca" prefWidth="171.0" text="Data do Orçamento" />
+                        <TableColumn fx:id="colvalidade" prefWidth="203.0" text="Validade" />
+                        <TableColumn fx:id="coltotal" prefWidth="128.0" text="Total" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

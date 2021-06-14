@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bedusystem.FXMLPrincipalController">
+   <top>
+      <BorderPane prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <center>
+            <MenuBar prefHeight="27.0" prefWidth="450.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Cadastros">
+                  <items>
+                        <MenuItem fx:id="menu_produtos" mnemonicParsing="false" onAction="#clickProdutos" text="Produtos" />
+                        <MenuItem fx:id="menu_funcionario" mnemonicParsing="false" onAction="#clickFuncionario" text="Funcionários" />
+                    <MenuItem fx:id="menu_cliente" mnemonicParsing="false" onAction="#clickClientes" text="Clientes" />
+                        <MenuItem fx:id="menu_servicos" mnemonicParsing="false" text="Serviços" />
+                        <MenuItem fx:id="menu_usuarios" mnemonicParsing="false" onAction="#clickUsuario" text="Usuarios" />
+                        <MenuItem fx:id="menu_fornecedor" mnemonicParsing="false" onAction="#clickFornecedor" text="Fornecedor" />
+                        <MenuItem fx:id="menu_orcamento" mnemonicParsing="false" text="Orçamento" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Serviços">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#clickRegistrarCompra" text="Registrar Compra" />
+                        <MenuItem mnemonicParsing="false" text="Venda" />
+                        <MenuItem fx:id="menu_os" mnemonicParsing="false" onAction="#clickOS" text="Ordem de Serviço" />
+                        <MenuItem fx:id="menu_or" mnemonicParsing="false" onAction="#clickOR" text="Orçamento" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Relatórios">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menu_admin" mnemonicParsing="false" text="Admin">
+                     <items>
+                        <MenuItem fx:id="menu_para" mnemonicParsing="false" onAction="#clickPara" text="Parametrização" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </center>
+         <right>
+            <ImageView fx:id="imgLogoGrande" fitHeight="56.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <Pane fx:id="hb_tela" prefHeight="475.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

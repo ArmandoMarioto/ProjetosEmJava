@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.henrique.CadProdutosController">
+   <center>
+      <AnchorPane prefHeight="445.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="paneInf" prefHeight="250.0" prefWidth="570.0" style="-fx-background-color: #E1E1E1;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <JFXTextField fx:id="txtCod" editable="false" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="65.0" promptText="Código" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0" />
+                  <JFXTextField fx:id="txtNome" labelFloat="true" layoutY="60.0" prefWidth="170.0" promptText="Nome*" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                  <JFXTextField fx:id="txtPreco" labelFloat="true" layoutX="10.0" layoutY="159.0" onKeyReleased="#evtMaskPreco" prefWidth="65.0" promptText="Preço*" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="105.0" />
+                  <JFXTextField fx:id="txtQtd" labelFloat="true" layoutX="13.0" layoutY="148.0" onKeyReleased="#evtMaskQtd" prefWidth="65.0" promptText="Quantidade" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="150.0" />
+                  <JFXComboBox fx:id="cbClass" labelFloat="true" layoutX="262.0" layoutY="150.0" prefHeight="25.0" prefWidth="170.0" promptText="Classificação*" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="205.0" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblInf" layoutX="15.0" prefHeight="17.0" text="Informações" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="paneBotoes" layoutX="24.0" layoutY="258.0" prefHeight="60.0" prefWidth="580.0" style="-fx-background-color: #E1E1E1;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <AnchorPane fx:id="paneNovo" layoutX="14.0" layoutY="25.0" onMouseClicked="#evtNovo" onMouseEntered="#evtNovoEnter" onMouseExited="#evtNovoExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgNovo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblNovo" layoutX="35.0" layoutY="9.0" text="Novo" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneAlterar" layoutX="132.0" layoutY="10.0" onMouseClicked="#evtAlterar" onMouseEntered="#evtAlterarEnter" onMouseExited="#evtAlterarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgAlterar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblAlterar" layoutX="50.0" layoutY="14.0" text="Alterar" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneConfirmar" layoutX="226.0" layoutY="10.0" onMouseClicked="#evtConfirmar" onMouseEntered="#evtConfirmarEnter" onMouseExited="#evtConfirmarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgConfirmar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblConfirmar" layoutX="50.0" layoutY="14.0" text="Confirmar" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneCancelar" layoutX="332.0" layoutY="10.0" onMouseClicked="#evtCancelar" onMouseEntered="#evtCancelarEnter" onMouseExited="#evtCancelarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgCancelar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblCancelar" layoutX="50.0" layoutY="14.0" text="Cancelar" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="paneExcluir" layoutX="466.0" layoutY="10.0" onMouseClicked="#evtExcluir" onMouseEntered="#evtExcluirEnter" onMouseExited="#evtExcluirExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgExcluir" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblExcluir" layoutX="50.0" layoutY="14.0" text="Excluir" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="panePesquisar" layoutX="491.0" layoutY="263.0" onMouseClicked="#evtPesquisar" onMouseEntered="#evtPesquisarEnter" onMouseExited="#evtPesquisarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="285.0">
+               <children>
+                  <ImageView fx:id="imgPesquisar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <Label fx:id="lblPesquisar" layoutX="50.0" layoutY="14.0" text="Pesquisar" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="lblObs" layoutX="14.0" layoutY="269.0" text="Obs: (*) Campos obrigatórios" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="280.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Produtos">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

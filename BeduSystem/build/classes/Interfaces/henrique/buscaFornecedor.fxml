@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="panePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.henrique.BuscaFornecedorController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Buscar Fornecedor">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="paneBusca" layoutX="219.0" layoutY="72.0" prefHeight="110.0" prefWidth="580.0" style="-fx-background-color: #E1E1E1;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <JFXTextField fx:id="txtNome" labelFloat="true" layoutX="14.0" layoutY="14.0" prefWidth="140.0" promptText="Nome" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0" />
+                  <AnchorPane layoutX="11.0" layoutY="64.0" prefHeight="35.0" prefWidth="270.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
+                     <children>
+                        <JFXRadioButton fx:id="rdNome" layoutX="8.0" layoutY="12.0" onAction="#evtRdNome" text="Nome" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0" />
+                        <JFXRadioButton fx:id="rdCnpj" layoutX="101.0" layoutY="12.0" onAction="#evtRdCpf" text="CPF/CNPJ" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="10.0" />
+                        <JFXRadioButton fx:id="rdEmail" layoutX="188.0" layoutY="12.0" onAction="#evtRdEmail" text="Email" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="11.0" layoutY="47.0" text="Buscar por:" AnchorPane.leftAnchor="10.0" />
+                  <AnchorPane fx:id="paneBuscar" layoutX="190.0" layoutY="23.0" onMouseClicked="#evtBuscar" onMouseEntered="#evtBuscarEnter" onMouseExited="#evtBuscarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <ImageView fx:id="imgBuscar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="lblBuscar" layoutX="50.0" layoutY="14.0" text="Buscar" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <VBox layoutX="186.0" layoutY="125.0" prefHeight="235.0" prefWidth="580.0" style="-fx-background-color: #E1E1E1;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="135.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="20.0" prefWidth="580.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <Label text="Fornecedores" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableview" prefHeight="215.0" prefWidth="580.0">
+                    <columns>
+                      <TableColumn fx:id="colCnpj" prefWidth="100.0" text="CPF/CNPJ" />
+                      <TableColumn fx:id="colNome" prefWidth="150.0" text="Nome" />
+                        <TableColumn fx:id="colCelular" prefWidth="75.0" text="Celular" />
+                        <TableColumn fx:id="colEmail" prefWidth="100.0" text="Email" />
+                        <TableColumn fx:id="colCep" prefWidth="75.0" text="CEP" />
+                        <TableColumn fx:id="colCidade" text="Cidade" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane fx:id="paneBotoes" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #E1E1E1;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="paneSelecionar" layoutX="377.0" layoutY="18.0" onMouseClicked="#evtSelecionar" onMouseEntered="#evtConfirmarEnter" onMouseExited="#evtConfirmarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <ImageView fx:id="imgSelecionar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <Label fx:id="lblSelecionar" layoutX="50.0" layoutY="14.0" text="Selecionar" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneCancelar" layoutX="486.0" layoutY="18.0" onMouseClicked="#evtCancelar" onMouseEntered="#evtCancelarEnter" onMouseExited="#evtCancelarExit" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <ImageView fx:id="imgCancelar" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <Label fx:id="lblCancelar" layoutX="50.0" layoutY="14.0" text="Cancelar" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

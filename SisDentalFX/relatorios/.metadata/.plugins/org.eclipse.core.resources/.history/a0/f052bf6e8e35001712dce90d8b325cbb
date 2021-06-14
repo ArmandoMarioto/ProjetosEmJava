@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-10T11:39:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel_estados" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff6e5e35-a413-4398-bb1d-d4a0ec91f7a9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sisdental"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM estado
+ORDER BY estado.est_nome]]>
+	</queryString>
+	<field name="est_cod" class="java.lang.Integer"/>
+	<field name="est_sgl" class="java.lang.String"/>
+	<field name="est_nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="6" width="144" height="34" uuid="e35462d3-1e95-413d-a552-2646000f8c07"/>
+				<textElement>
+					<font fontName="Calibri" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SysDental]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="20" width="180" height="30" uuid="2930388a-4e6d-48cd-8912-d294969fe407"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[relação de Estados]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="40" width="550" height="1" uuid="8168e83a-4aff-422e-8130-1ae9fc2a24b1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<textField pattern="dd &apos;de&apos; MMMMMM &apos;de&apos; yyyy">
+				<reportElement x="447" y="6" width="100" height="18" uuid="418dc5ce-d26c-4027-a3a7-716f2d7303c9"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="2" y="0" width="48" height="16" uuid="4bc768c8-c32e-41d6-9673-d268f100b057">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<text><![CDATA[código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="70" height="16" uuid="e90abe7a-27a8-4f69-921b-4870269282b7"/>
+				<text><![CDATA[sigla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="0" width="232" height="16" uuid="2e9df3f9-55b6-4406-b47f-6ae4a948028d"/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="16" uuid="8997d254-c002-4a76-8bd9-462f7657d9b8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{est_cod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="70" height="16" uuid="5f535677-8efa-4641-b0fc-f2e2f407204a"/>
+				<textFieldExpression><![CDATA[$F{est_sgl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="0" width="232" height="16" uuid="edfea097-a82a-4ee3-97bc-88a96620ab3f">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{est_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="56" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="18" width="30" height="18" uuid="124d6311-411a-4add-bb3c-acc1ffbdaa2f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="510" y="20" width="36" height="16" uuid="b5f5910a-3ada-4c2b-b532-1bb8b668562d"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="484" y="18" width="22" height="18" uuid="050f31d8-2dba-4cb9-8ae8-4ef0666a3be6"/>
+				<text><![CDATA[de]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

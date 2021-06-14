@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="450.0" maxWidth="645.0" minHeight="450.0" minWidth="645.0" prefHeight="450.0" prefWidth="645.0" spacing="2.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisdentalfx.ui.TelaCadPacienteController">
+   <children>
+      <HBox prefHeight="295.0" prefWidth="645.0" spacing="2.0">
+         <children>
+            <HBox prefHeight="238.0" prefWidth="523.0">
+               <children>
+                  <AnchorPane fx:id="pnDados" prefHeight="252.0" prefWidth="523.0" style="-fx-background-color: #F0F8FF;">
+                     <children>
+                        <Label layoutX="18.0" layoutY="2.0" text="Nome:" />
+                        <Label layoutX="17.0" layoutY="93.0" text="E-Mail:" />
+                        <Label layoutX="17.0" layoutY="48.0" text="CPF:" />
+                        <Label layoutX="184.0" layoutY="48.0" text="Telefone:" />
+                        <Label layoutX="361.0" text="Código:" />
+                        <TextField fx:id="tfCodigo" layoutX="362.0" layoutY="18.0" prefHeight="25.0" prefWidth="67.0" />
+                        <TextField fx:id="tfNome" layoutX="11.0" layoutY="18.0" prefHeight="25.0" prefWidth="327.0" />
+                        <TextField fx:id="tfCPF" layoutX="10.0" layoutY="65.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TextField fx:id="tfTelefone" layoutX="178.0" layoutY="65.0" prefHeight="25.0" prefWidth="165.0" />
+                        <TextField fx:id="tfEmail" layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="336.0" />
+                        <ImageView fx:id="img" fitHeight="140.0" fitWidth="140.0" layoutX="366.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="14.0" layoutY="135.0" text="CEP:" />
+                        <TextField fx:id="tfCEP" layoutX="8.0" layoutY="152.0" onKeyPressed="#evtCEP" prefHeight="25.0" prefWidth="90.0" />
+                        <Label layoutX="17.0" layoutY="177.0" text="Bairro:" />
+                        <TextField fx:id="tfBairro" layoutX="7.0" layoutY="194.0" prefHeight="25.0" prefWidth="209.0" />
+                        <Label layoutX="240.0" layoutY="176.0" text="Rua:" />
+                        <TextField fx:id="tfRua" layoutX="233.0" layoutY="193.0" prefHeight="25.0" prefWidth="195.0" />
+                        <TextField fx:id="tfNumero" layoutX="439.0" layoutY="193.0" prefHeight="25.0" prefWidth="67.0" promptText="Nº" />
+                        <Label layoutX="188.0" layoutY="137.0" text="Cidade:" />
+                        <TextArea fx:id="tfHistorico" layoutX="10.0" layoutY="224.0" prefHeight="66.0" prefWidth="499.0" promptText="Histórico clínico:" />
+                        <ComboBox fx:id="cbCidade" layoutX="182.0" layoutY="153.0" prefHeight="25.0" prefWidth="165.0" />
+                        <ComboBox fx:id="cbUf" layoutX="105.0" layoutY="153.0" onAction="#evtUfClicked" prefHeight="25.0" prefWidth="67.0" />
+                        <Label layoutX="109.0" layoutY="136.0" text="UF:" />
+                        <Button fx:id="btFoto" layoutX="437.0" layoutY="17.0" mnemonicParsing="false" onAction="#evtBtFoto" prefHeight="25.0" prefWidth="67.0" text="Foto" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="200.0" prefWidth="123.0" style="-fx-background-color: #F0F8FF;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="110.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btNovo" mnemonicParsing="false" onAction="#evtBtNovo" prefHeight="30.0" prefWidth="90.0" text="Novo" />
+                        <Button fx:id="btAlterar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#evtBtAlterar" prefHeight="30.0" prefWidth="90.0" text="Alterar" />
+                        <Button fx:id="btApagar" mnemonicParsing="false" onAction="#evtBtApagar" prefHeight="30.0" prefWidth="90.0" text="Apagar" />
+                        <Button fx:id="btConfirmar" mnemonicParsing="false" onAction="#evtBtConfirmar" prefHeight="30.0" prefWidth="90.0" text="Confirmar" />
+                        <Button fx:id="btCancelar" mnemonicParsing="false" onAction="#evtCancelar" prefHeight="30.0" prefWidth="90.0" text="Cancelar" />
+                        <Button fx:id="btEmail" mnemonicParsing="false" onAction="#evtBtEmail" prefHeight="36.0" prefWidth="52.0" style="-fx-background-color: yellow;" text="email" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="641.0" spacing="10.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <TextField fx:id="tfBuscar" prefHeight="25.0" prefWidth="264.0" promptText="Buscar" />
+            <Button fx:id="btBuscar" mnemonicParsing="false" onAction="#evtBtBuscar" prefWidth="90.0" text="Buscar" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" onMouseClicked="#evtTable" prefHeight="112.0" prefWidth="645.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="92.0" text="Código" />
+            <TableColumn fx:id="colNome" prefWidth="552.0" text="Nome" />
+         </columns>
+      </TableView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>

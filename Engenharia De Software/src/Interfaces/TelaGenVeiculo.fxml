@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.TelaGenVeiculoController">
+    <top>
+        <VBox prefHeight="185.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane prefHeight="100.0" prefWidth="170.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="26.0" text="Marca" />
+                                <JFXComboBox fx:id="cb_marca" layoutX="16.0" layoutY="50.0" onAction="#click_marca" prefHeight="25.0" prefWidth="171.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="100.0" prefWidth="179.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="26.0" text="Modelo" />
+                                <JFXComboBox fx:id="cb_modelo" layoutX="16.0" layoutY="50.0" prefHeight="25.0" prefWidth="157.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="75.0" prefWidth="228.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="26.0" text="Placa" />
+                                <JFXTextField fx:id="tf_placa" layoutX="15.0" layoutY="50.0" prefHeight="25.0" prefWidth="211.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <AnchorPane prefHeight="73.0" prefWidth="178.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="14.0" text="Ano" />
+                                <JFXDatePicker fx:id="dtp_ano" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="161.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="73.0" prefWidth="161.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="14.0" text="Cor" />
+                                <JFXColorPicker fx:id="tf_cor" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="138.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="73.0" prefWidth="258.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="14.0" text="Chassi" />
+                                <JFXTextField fx:id="tf_chassi" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="237.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="64.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <JFXButton fx:id="btn_adicionar" onAction="#click_adicionar" text="Adicionar" />
+                        <JFXButton fx:id="btn_remover" onAction="#click_remover" text="Remover" />
+                        <JFXButton fx:id="btn_editar" onAction="#click_editar" text="Editar" />
+                        <JFXButton fx:id="btn_confirmar" onAction="#click_confirmar" text="Confirmar" />
+                        <JFXButton fx:id="btn_cancelar" onAction="#click_cancelar" text="Cancelar" />
+                        <JFXButton fx:id="btn_sair" onAction="#click_sair" text="Sair" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tv_veiculo" prefHeight="216.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="tc_marca" prefWidth="89.0" text="Marca" />
+                        <TableColumn fx:id="tc_modelo" prefWidth="101.0" text="Modelo" />
+                        <TableColumn fx:id="tc_placa" prefWidth="121.0" text="Placa" />
+                        <TableColumn fx:id="tc_ano" prefWidth="62.0" text="Ano" />
+                        <TableColumn fx:id="tc_cor" prefWidth="78.0" text="Cor" />
+                        <TableColumn fx:id="tc_chassi" prefWidth="147.0" text="Chassi" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

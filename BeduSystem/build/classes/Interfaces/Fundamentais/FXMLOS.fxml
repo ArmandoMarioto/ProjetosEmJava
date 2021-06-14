@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.Fundamentais.FXMLOSController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="674.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXComboBox fx:id="cb_status" layoutX="46.0" layoutY="23.0" prefHeight="25.0" prefWidth="199.0" promptText="Status da Manutenção*" />
+            <JFXDatePicker fx:id="dp_data" layoutX="463.0" layoutY="99.0" promptText="Data*" />
+            <JFXTextArea fx:id="ta_descricao" layoutX="46.0" layoutY="73.0" prefHeight="52.0" prefWidth="328.0" promptText="Descrição" />
+            <JFXButton fx:id="btn_alterar" layoutX="253.0" layoutY="147.0" onAction="#clickAlterar" text="Alterar Status" />
+            <JFXButton fx:id="bnt_fechar" layoutX="368.0" layoutY="147.0" onAction="#clickFechar" text="Fechar Manutenção" />
+            <JFXButton fx:id="btn_iniciar" layoutX="103.0" layoutY="147.0" onAction="#clickIniciar" text="Iniciar Manutenção" />
+            <TableView fx:id="tv_os" layoutX="16.0" layoutY="181.0" onMouseClicked="#clickTabela" prefHeight="202.0" prefWidth="685.0">
+              <columns>
+                <TableColumn fx:id="tc_nome" prefWidth="121.0" text="Nome do Cliente" />
+                <TableColumn fx:id="tc_veiculo" prefWidth="99.0" text="Veiculo" />
+                  <TableColumn fx:id="tc_status" prefWidth="128.0" text="Status Atual" />
+                  <TableColumn fx:id="tc_data" prefWidth="108.0" text="Data" />
+                  <TableColumn fx:id="tc_descricao" prefWidth="227.0" text="Descrição" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_help" layoutX="254.0" layoutY="23.0" onAction="#clickStatus" text="?" />
+            <JFXTextField fx:id="tf_funcionario" layoutX="390.0" layoutY="23.0" prefHeight="25.0" prefWidth="239.0" promptText="Funcionário*" />
+            <JFXButton fx:id="btn_cancelar" layoutX="507.0" layoutY="147.0" onAction="#clickCancelar" text="Cancelar" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

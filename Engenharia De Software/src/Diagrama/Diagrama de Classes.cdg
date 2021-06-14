@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Diagrama de Classes">
+  <ClassDiagramComponents>
+    <Class name="Categoria" package="" visibility="public" xPosition="69.0" yPosition="47.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Fornecedor" package="" visibility="public" xPosition="91.0" yPosition="179.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="cnpj" type="String" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="fone" type="String" visibility="private"/>
+        <Field name="site" type="String" visibility="private"/>
+        <Field name="contato" type="String" visibility="private"/>
+        <Field name="celular" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Lote" package="" visibility="public" xPosition="1485.0" yPosition="47.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+        <Field name="dt_validade" type="Date" visibility="private"/>
+        <Field name="dt_entrega" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Parametrização" package="" visibility="public" xPosition="302.0" yPosition="47.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Veiculo" package="" visibility="public" xPosition="1485.0" yPosition="697.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="chassi" type="String" visibility="private"/>
+        <Field name="placa" type="String" visibility="private"/>
+        <Field name="cor" type="Color" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Modelo" package="" visibility="public" xPosition="1305.0" yPosition="384.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="ano" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Tipo" package="" visibility="public" xPosition="336.0" yPosition="179.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="desc" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Produto" package="" visibility="public" xPosition="633.0" yPosition="322.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="preco" type="Double" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+        <Field name="obs" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Funcionário" package="" visibility="public" xPosition="178.0" yPosition="1211.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Fabricante" package="" visibility="public" xPosition="633.0" yPosition="74.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Marca" package="" visibility="public" xPosition="1549.0" yPosition="322.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="1116.0" yPosition="1065.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="rg" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+        <Field name="cep" type="String" visibility="private"/>
+        <Field name="cidade" type="String" visibility="private"/>
+        <Field name="estado" type="Strng" visibility="private"/>
+        <Field name="bairro" type="String" visibility="private"/>
+        <Field name="dt_cadastro" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ItemOrdemServiço" package="" visibility="public" xPosition="1004.0" yPosition="924.0">
+      <Fields>
+        <Field name="valor" type="Double" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ItemOrdemProduto" package="" visibility="public" xPosition="547.0" yPosition="580.0">
+      <Fields>
+        <Field name="valor" type="Double" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Orçamento" package="" visibility="public" xPosition="21.0" yPosition="942.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="dtorcamento" type="Date" visibility="private"/>
+        <Field name="dtvalidade" type="Date" visibility="private"/>
+        <Field name="total" type="Double" visibility="private"/>
+        <Field name="obsFormaDePagamento" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ItemOrcamentoServiço" package="" visibility="public" xPosition="360.0" yPosition="735.0">
+      <Fields>
+        <Field name="valor" type="Double" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="OrdemServiço" package="" visibility="public" xPosition="643.0" yPosition="1087.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="dtfechamento" type="Date" visibility="private"/>
+        <Field name="dtos" type="Date" visibility="private"/>
+        <Field name="valorTot" type="Double" visibility="private"/>
+        <Field name="parcela" type="ArrayList&lt;Pagamento&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ItemOrcamentoProduto" package="" visibility="public" xPosition="75.0" yPosition="669.0">
+      <Fields>
+        <Field name="valor" type="Double" visibility="private"/>
+        <Field name="qtd" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Serviço" package="" visibility="public" xPosition="791.0" yPosition="697.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="desc" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Prateleira" package="" visibility="public" xPosition="1019.0" yPosition="422.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Compartimento_da_Prateleira" package="" visibility="public" xPosition="1050.0" yPosition="649.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="capacidade" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ancora" package="" visibility="public" xPosition="178.0" yPosition="2371.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Pagamento" package="" visibility="public" xPosition="302.0" yPosition="1376.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="os" type="OrdemServico" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cartao" package="" visibility="public" xPosition="1050.0" yPosition="1600.0">
+      <Fields>
+        <Field name="juros" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Pagar" returnType="Boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Boleto" package="" visibility="public" xPosition="643.0" yPosition="1600.0">
+      <Fields>
+        <Field name="desconto" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Pagar" returnType="Boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dinheiro" package="" visibility="public" xPosition="846.0" yPosition="1600.0">
+      <Fields>
+        <Field name="desconto" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Pagar" returnType="Boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Subject" package="" visibility="public" xPosition="955.0" yPosition="1.0">
+      <Methods>
+        <Method name="mynotify" returnType="boolean" visibility="public"/>
+        <Method name="adicionar" returnType="Observer" visibility="public">
+          <Argument type="Observer" name="o"/>
+        </Method>
+        <Method name="remover" returnType="Observer" visibility="public">
+          <Argument type="Observer" name="o"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Observer" package="" visibility="public" xPosition="1495.0" yPosition="1087.0">
+      <Methods>
+        <Method name="send" returnType="boolean" visibility="public"/>
+        <Method name="receive" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Strategy" package="" visibility="public" xPosition="814.0" yPosition="1391.0">
+      <Methods>
+        <Method name="Pagar" returnType="Boolean" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Subject" target="Observer" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="" source="Serviço" target="ItemOrcamentoServiço" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="Fabricante" target="Produto" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="" source="Veiculo" target="Cliente" sourceCardinality="0..*" targetCardinality="1..1"/>
+    <UseRelation name="" source="Tipo" target="Produto" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="Lote" target="Produto" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="" source="OrdemServiço" target="Funcionário" sourceCardinality="0..*" targetCardinality="1..1"/>
+    <UseRelation name="" source="OrdemServiço" target="ItemOrdemServiço" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Cartao" target="Strategy"/>
+    <UseRelation name="" source="Serviço" target="ItemOrdemServiço" sourceCardinality="1..*" targetCardinality="0..*"/>
+    <UseRelation name="" source="Modelo" target="Veiculo" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <HasRelation name="Possui" source="Pagamento" target="Strategy" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Cliente" target="OrdemServiço" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="Veiculo" target="Orçamento" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="OrdemServiço" target="Pagamento" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="esta" source="Produto" target="Compartimento_da_Prateleira" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Orçamento" target="ItemOrcamentoServiço" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Produto" target="Subject"/>
+    <HasRelation name="possui" source="Prateleira" target="Compartimento_da_Prateleira" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <UseRelation name="" source="Orçamento" target="ItemOrcamentoProduto" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="ItemOrdemProduto" target="Produto" sourceCardinality="0..*" targetCardinality="1..1"/>
+    <UseRelation name="" source="Produto" target="ItemOrcamentoProduto" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="Funcionário" target="Orçamento" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="" source="OrdemServiço" target="ItemOrdemProduto" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <UseRelation name="" source="Marca" target="Modelo" sourceCardinality="1..1" targetCardinality="0..*"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Boleto" target="Strategy"/>
+    <UseRelation name="" source="Orçamento" target="OrdemServiço" sourceCardinality="1..1" targetCardinality="0..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Cliente" target="Observer"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Dinheiro" target="Strategy"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

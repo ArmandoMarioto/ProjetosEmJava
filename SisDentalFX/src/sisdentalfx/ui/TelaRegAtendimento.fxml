@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="pnPrincipal" maxHeight="450.0" maxWidth="645.0" minHeight="450.0" minWidth="645.0" prefHeight="450.0" prefWidth="645.0" spacing="2.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisdentalfx.ui.TelaRegAtendimentoController">
+   <children>
+      <AnchorPane fx:id="pnPacientes" prefHeight="446.0" prefWidth="220.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <TableView fx:id="tablePacientes" layoutX="10.0" layoutY="90.0" onMouseClicked="#evtTablePacientes" prefHeight="342.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colHora" prefWidth="60.0" text="Hora" />
+                <TableColumn fx:id="colPaciente" prefWidth="139.0" text="Pacientes" />
+              </columns>
+            </TableView>
+            <DatePicker fx:id="dpData" layoutX="23.0" layoutY="14.0" onAction="#evtDpData" />
+            <ComboBox fx:id="cbDentista" layoutX="23.0" layoutY="56.0" onAction="#evtCbDentista" prefHeight="25.0" prefWidth="174.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pnDados" prefHeight="446.0" prefWidth="420.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <TextArea fx:id="taObs" layoutX="13.0" layoutY="14.0" prefHeight="97.0" prefWidth="396.0" promptText="Observações..." wrapText="true" />
+            <ComboBox fx:id="cbMaterial" layoutX="12.0" layoutY="117.0" prefHeight="25.0" prefWidth="220.0" />
+            <Spinner fx:id="spMaterial" layoutX="241.0" layoutY="117.0" onMouseClicked="#evtSpMaterial" prefHeight="25.0" prefWidth="87.0" />
+            <Button fx:id="btPlusMat" layoutX="342.0" layoutY="117.0" mnemonicParsing="false" onAction="#evtBtPlusMat" prefHeight="25.0" prefWidth="25.0" text="+" />
+            <Button fx:id="btNegMat" layoutX="380.0" layoutY="117.0" mnemonicParsing="false" onAction="#evtBtNegMat" prefHeight="25.0" prefWidth="25.0" text="-" />
+            <TableView fx:id="tableMaterial" layoutX="13.0" layoutY="149.0" onMouseClicked="#evtTableMat" prefHeight="97.0" prefWidth="396.0">
+              <columns>
+                <TableColumn fx:id="colMaterial" prefWidth="320.0" text="Material" />
+                <TableColumn fx:id="colQuantidadeMat" minWidth="5.0" prefWidth="75.0" text="Quantidade" />
+              </columns>
+            </TableView>
+            <Button fx:id="btConfirmar" layoutX="173.0" layoutY="399.0" mnemonicParsing="false" onAction="#evtBtConfirmar" prefHeight="30.0" prefWidth="100.0" text="Confirmar" />
+            <Button fx:id="btCancelar" layoutX="304.0" layoutY="399.0" mnemonicParsing="false" onAction="#evtBtCancelar" prefHeight="30.0" prefWidth="100.0" text="Cancelar" />
+            <ComboBox fx:id="cbProcedimentos" layoutX="13.0" layoutY="258.0" prefHeight="25.0" prefWidth="220.0" />
+            <Spinner fx:id="spProcedimentos" layoutX="241.0" layoutY="258.0" onMouseClicked="#evtSpProcedimentos" prefHeight="25.0" prefWidth="87.0" />
+            <Button fx:id="btPlusPro" layoutX="342.0" layoutY="258.0" mnemonicParsing="false" onAction="#evtBtPlusPro" prefHeight="25.0" prefWidth="25.0" text="+" />
+            <Button fx:id="btNegProc" layoutX="380.0" layoutY="258.0" mnemonicParsing="false" onAction="#evtBtNegPro" prefHeight="25.0" prefWidth="25.0" text="-" />
+            <TableView fx:id="TableProcedimentos" layoutX="14.0" layoutY="290.0" onMouseClicked="#evtTablePro" prefHeight="97.0" prefWidth="396.0">
+               <columns>
+                  <TableColumn fx:id="colProcedimentos" prefWidth="324.0" text="Procedimentos" />
+                  <TableColumn fx:id="colQuantidadePro" prefWidth="71.0" text="Quantidade" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</HBox>

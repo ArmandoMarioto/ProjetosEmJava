@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="534.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="Interfaces.TelaLoginController">
+    <children>
+        <JFXTextField fx:id="txbUsuario" labelFloat="true" layoutX="131.0" layoutY="85.0" prefHeight="31.0" prefWidth="272.0" promptText="Usuário" />
+        <JFXPasswordField fx:id="txbSenha" labelFloat="true" layoutX="131.0" layoutY="153.0" prefHeight="31.0" prefWidth="272.0" promptText="Senha" />
+        <JFXButton fx:id="btnLogin" layoutX="131.0" layoutY="246.0" text="Login" />
+        <JFXButton fx:id="btnCancelar" layoutX="326.0" layoutY="246.0" text="Cancelar" />
+    </children>
+</AnchorPane>

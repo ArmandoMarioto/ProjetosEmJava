@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="331.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.FXMLStatusController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="tf_status" layoutX="24.0" layoutY="25.0" prefHeight="25.0" prefWidth="264.0" promptText="Status*" />
+            <TableView fx:id="tv_tabela" layoutX="27.0" layoutY="103.0" onMouseClicked="#clickTabela" prefHeight="200.0" prefWidth="260.0">
+              <columns>
+                <TableColumn fx:id="tc_status" prefWidth="259.0" text="Status" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_novo" layoutX="27.0" layoutY="67.0" onAction="#clickNovo" text="Novo" />
+            <JFXButton fx:id="bnt_alterar" layoutX="86.0" layoutY="67.0" onAction="#clickAlterar" text="Alterar" />
+            <JFXButton fx:id="bnt_remover" layoutX="153.0" layoutY="67.0" onAction="#clickRemover" text="Remover" />
+            <JFXButton fx:id="btn_cancelar" layoutX="226.0" layoutY="67.0" onAction="#clickCancelar" text="Cancelar" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

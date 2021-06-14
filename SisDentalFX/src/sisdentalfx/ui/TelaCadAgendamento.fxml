@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="pnAgendamento" maxHeight="450.0" maxWidth="645.0" minHeight="450.0" minWidth="645.0" prefHeight="450.0" prefWidth="645.0" spacing="2.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisdentalfx.ui.TelaCadAgendamentoController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="230.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <AnchorPane prefHeight="450.0" prefWidth="212.0">
+               <children>
+                  <DatePicker fx:id="dpData" layoutX="7.0" layoutY="14.0" onAction="#evtDpData" prefHeight="25.0" prefWidth="203.0" />
+                  <ComboBox fx:id="cbDentista" layoutX="7.0" layoutY="257.0" onAction="#evtCbDentista" prefHeight="25.0" prefWidth="203.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="450.0" prefWidth="445.0" style="-fx-background-color: #F0F8FF;">
+         <children>
+            <AnchorPane prefHeight="450.0" prefWidth="0.0">
+               <children>
+                  <TableView fx:id="table" layoutX="11.0" layoutY="15.0" onMouseClicked="#evtTable" prefHeight="370.0" prefWidth="408.0">
+                    <columns>
+                      <TableColumn fx:id="colHorario" prefWidth="109.0" text="Horários" />
+                      <TableColumn fx:id="colPaciente" prefWidth="298.0" text="Pacientes" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btAgendar" layoutX="14.0" layoutY="396.0" mnemonicParsing="false" onAction="#evtBtAgendar" prefHeight="30.0" prefWidth="100.0" text="Agendar" />
+                  <Button fx:id="btDesmarcar" layoutX="173.0" layoutY="396.0" mnemonicParsing="false" onAction="#evtBtDesmarcar" prefHeight="30.0" prefWidth="100.0" text="Desmarcar" />
+                  <Button fx:id="btFechar" layoutX="319.0" layoutY="396.0" mnemonicParsing="false" onAction="#evtBtFechar" prefHeight="30.0" prefWidth="100.0" text="Fechar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</HBox>

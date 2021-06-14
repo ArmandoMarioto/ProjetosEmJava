@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FX.FXMLSystemController">
+   <children>
+      <JFXTextField fx:id="tf_nome" layoutX="134.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" promptText="Nome Fantasia" AnchorPane.leftAnchor="64.0" />
+      <JFXTextField fx:id="tf_big" editable="false" layoutX="64.0" layoutY="160.0" prefHeight="25.0" prefWidth="150.0" promptText="Logo Grande" AnchorPane.leftAnchor="64.0" />
+      <JFXTextField fx:id="tf_small" editable="false" layoutX="336.0" layoutY="160.0" prefHeight="25.0" prefWidth="150.0" promptText="Logo Pequeno" AnchorPane.rightAnchor="114.0" />
+      <JFXTextField fx:id="tf_email" layoutX="115.0" layoutY="224.0" prefHeight="25.0" prefWidth="200.0" promptText="Email" AnchorPane.leftAnchor="64.0" />
+      <JFXTextField fx:id="tf_fone" layoutX="204.0" layoutY="224.0" prefHeight="25.0" prefWidth="200.0" promptText="Telefone" AnchorPane.rightAnchor="64.0" />
+      <JFXTextField fx:id="tf_usuario" layoutX="204.0" layoutY="288.0" prefHeight="25.0" prefWidth="200.0" promptText="Usuario" />
+      <JFXPasswordField fx:id="tf_senha" layoutX="204.0" layoutY="336.0" prefHeight="25.0" prefWidth="200.0" promptText="Senha" />
+      <Button fx:id="btn_big" layoutX="234.0" layoutY="160.0" mnemonicParsing="false" onAction="#ClickBig" prefHeight="25.0" prefWidth="30.0" style="-fx-background-radius: 20;" text="..." />
+      <Button fx:id="btn_small" layoutX="506.0" layoutY="160.0" mnemonicParsing="false" onAction="#ClickSmall" prefHeight="25.0" prefWidth="30.0" style="-fx-background-radius: 20;" text="..." AnchorPane.rightAnchor="64.0" />
+      <Button fx:id="btn_salvar" layoutX="486.0" layoutY="361.0" mnemonicParsing="false" onAction="#ClickSalvar" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 20;" text="Salvar" />
+      <Label alignment="CENTER" layoutX="179.0" layoutY="32.0" text="Dados Inicialização" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tf_ramo" layoutX="144.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" promptText="Ramo" AnchorPane.rightAnchor="64.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+Tue May 29 11:12:59 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:12:59 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:12:59 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:00 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:00 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:01 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:01 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:01 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:01 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:02 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:02 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:02 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:02 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:03 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:03 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:03 BRT 2018:  Erro AO Carregar Tabela You have attempted to set a value of type class java.lang.String for parameter data with expected type of class java.util.Date from query string SELECT c FROM Compra c WHERE c.data = :data.
+Tue May 29 11:13:38 BRT 2018:  Realizado
+Tue May 29 11:14:40 BRT 2018:  Realizado
+Tue May 29 11:14:47 BRT 2018:  Realizado
+Tue May 29 11:17:32 BRT 2018:  Realizado

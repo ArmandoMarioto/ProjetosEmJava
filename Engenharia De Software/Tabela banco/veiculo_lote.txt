@@ -1,0 +1,20 @@
+create table veiculo
+(
+	vei_cod integer not null,
+	vei_ano integer not null,
+	vei_modelo character varying[20] not null,
+	vei_cor character varying[20] not null,
+	vei_placa character varying[8] not null,
+	constraint pk_veiculo primary key (vei_cod)
+)
+
+create table lote
+(
+	lot_cod integer not null,
+	lot_tipo character varying[20] not null,
+	lot_desc character varying[50],
+	lot_qtd integer not null,
+	lot_venc date,
+	lot_ent date not null,
+	constraint pk_lote primary key (lot_cod)
+)

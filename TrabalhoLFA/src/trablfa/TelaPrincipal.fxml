@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trablfa.TelaPrincipalController">
+   <children>
+      <TextField fx:id="tf_er" layoutX="14.0" layoutY="145.0" prefHeight="25.0" prefWidth="213.0" />
+      <TextField fx:id="tf_pala" layoutX="14.0" layoutY="268.0" prefHeight="25.0" prefWidth="213.0" />
+      <Text layoutX="72.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expressão Regular" />
+      <Text layoutX="83.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palavra" />
+      <Button fx:id="bt_er" layoutX="28.0" layoutY="200.0" mnemonicParsing="false" onAction="#evt_er" prefHeight="25.0" prefWidth="185.0" text="Comfirmar" />
+      <Button fx:id="bt_pala" layoutX="28.0" layoutY="310.0" mnemonicParsing="false" onAction="#evt_pala" prefHeight="25.0" prefWidth="185.0" text="Comfirmar" />
+      <TableView fx:id="tb_aceita" layoutX="347.0" layoutY="27.0" prefHeight="181.0" prefWidth="193.0">
+        <columns>
+          <TableColumn fx:id="cl_aceita" prefWidth="198.0" text="Palavras Aceitas" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tb_rejeita" layoutX="348.0" layoutY="212.0" prefHeight="181.0" prefWidth="193.0">
+         <columns>
+            <TableColumn fx:id="cl_rejeita" prefWidth="198.0" text="Palavras Rejeitadas" />
+         </columns>
+      </TableView>
+      <Button fx:id="bt_novo" layoutX="79.0" layoutY="51.0" mnemonicParsing="false" onAction="#evt_novo" prefHeight="25.0" prefWidth="82.0" text="Novo" />
+   </children>
+</Pane>

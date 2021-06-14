@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.TelaSelectOrcamentoController">
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="167.0" prefWidth="847.0" spacing="25.0">
+                    <children>
+                        <JFXTextField fx:id="txCliente" focusTraversable="false" labelFloat="true" promptText="Cliente(CPF)" />
+                        <JFXTextField fx:id="txFuncionario" focusTraversable="false" promptText="Funcionário(Nome)" />
+                        <VBox alignment="CENTER_LEFT">
+                            <children>
+                                <JFXCheckBox fx:id="chdatas" focusTraversable="false" text="Usar Intervalo">
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </JFXCheckBox>
+                                <VBox fx:id="pndatas" alignment="CENTER" prefHeight="157.0" prefWidth="248.0">
+                                    <children>
+                                        <JFXDatePicker fx:id="dtinicio" focusTraversable="false" />
+                                        <Label text="Á">
+                                            <VBox.margin>
+                                                <Insets top="20.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <JFXDatePicker fx:id="dtfim" focusTraversable="false" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <JFXButton focusTraversable="false" onAction="#evtBusca" text="Buscar" />
+                    </children>
+                </HBox>
+                <TableView fx:id="tabela" focusTraversable="false" onMouseClicked="#evtClickInTable" prefHeight="338.0" prefWidth="847.0">
+                    <columns>
+                        <TableColumn fx:id="colfuncionario" prefWidth="301.0" text="Funcionario" />
+                        <TableColumn fx:id="colcliente" prefWidth="320.0" text="Cliente" />
+                        <TableColumn fx:id="coldtorca" prefWidth="224.0" text="Data do Orçamento" />
+                        <TableColumn fx:id="colvalidade" prefWidth="150.0" text="Validade" />
+                        <TableColumn fx:id="coltotal" prefWidth="128.0" text="Total" />
+                    </columns>
+                </TableView>
+                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                    <children>
+                        <JFXButton focusTraversable="false" onAction="#evtCancelar" prefWidth="100.0" text="Cancelar" />
+                        <JFXButton focusTraversable="false" onAction="#evtConfirmar" prefWidth="100.0" text="Confirmar">
+                            <padding>
+                                <Insets right="15.0" />
+                            </padding>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

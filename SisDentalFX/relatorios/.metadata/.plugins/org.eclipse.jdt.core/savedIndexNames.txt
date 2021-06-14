@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+D:\SisDentalFX\relatorios\.metadata\.plugins\org.eclipse.jdt.core
+1840794604.index

@@ -1,0 +1,435 @@
+
+
+
+--
+-- ER/Studio Data Architect SQL Code Generation
+-- Project :      ENG2.DM1
+--
+-- Date Created : Monday, May 21, 2018 15:21:41
+-- Target DBMS : PostgreSQL 8.0
+--
+
+-- 
+-- TABLE: agendamento_servico 
+--
+
+
+-- teste foderosso
+
+-- 
+-- TABLE: cliente 
+--
+
+CREATE TABLE cliente(
+    cli_cod             serial        NOT NULL,
+    cli_cpf             varchar(14)     NOT NULL,
+    cli_rg              varchar(14)     NOT NULL,
+    cli_nome            varchar(70)     NOT NULL,
+    cli_telefone        varchar(20)     NOT NULL,
+    cli_email           varchar(50),
+    cli_endereco        varchar(100)    NOT NULL,
+    cli_cep             varchar(10)     NOT NULL,
+    cli_obs             varchar(500),
+    cli_datacadastro    date            NOT NULL,
+    CONSTRAINT "PK10" PRIMARY KEY (cli_cod)
+)
+;
+
+create table marca
+(
+	marc_cod serial not null,
+	marc_nome varchar(30) not null,
+	constraint pk_marca primary key (marc_cod)
+);
+
+create table modelo
+(
+	mod_cod serial not null,
+	mod_desc varchar(30) not null,
+	mod_ano integer not null,
+	constraint pk_modelo primary key (mod_cod)
+);
+
+create table veiculo
+(
+	vei_cod integer not null,
+	cli_cod integer not null,
+	mod_cod integer not null,
+	marc_cod integer not null,
+	vei_chassi character varying[17] not null,
+	vei_cor character varying[20] not null,
+	vei_placa character varying[8] not null,
+	constraint pk_veiculo primary key (vei_cod),
+	constraint fk_veiculo_cliente foreign key (cli_cod) references cliente,
+	constraint fk_veiculo_modelo foreign key (mod_cod) references modelo,
+	constraint fk_veiculo_marca foreign key (marc_cod) references marca
+);
+
+
+-- 
+-- TABLE: "contaAreceber" 
+--
+/*
+CREATE TABLE "contaAreceber"(
+    contaAreceber_cod  serial    NOT NULL,
+    numero               integer        NOT NULL,
+    parc_dtvenc          date        NOT NULL,
+    parc_dtpag           date,
+    parc_valor           decimal(10,2),
+    valor_pg             decimal(10,2),
+    os_cod               integer    NOT NULL,
+    venda_cod            integer    NOT NULL,
+    CONSTRAINT "PK2" PRIMARY KEY (contaAreceber_cod)
+)
+;
+*/
+
+
+
+
+-- 
+-- TABLE: fabricante 
+--
+
+CREATE TABLE fabricante(
+    fab_cod     serial       NOT NULL,
+    fab_nome    varchar(70)    NOT NULL,
+    CONSTRAINT "PK13" PRIMARY KEY (fab_cod)
+)
+;
+
+
+-- 
+-- TABLE: funcionario 
+--
+
+CREATE TABLE funcionario(
+    usr_id      integer              NOT NULL,
+    login       varchar(50)       NOT NULL,
+    senha       varchar(18)       NOT NULL,
+    salario     decimal(10, 2),
+    nome        varchar(70)       NOT NULL,
+    rg          varchar(20),
+    cpf         varchar(11)       NOT NULL,
+    telefone    varchar(20),
+    email       varchar(50),
+    obs         varchar(100),
+    grupo_id    integer             ,--NOT NULL
+    CONSTRAINT "PK1_2" PRIMARY KEY (usr_id)
+)
+;
+
+
+-- 
+-- TABLE: "ItensOrdemPro" 
+--
+
+CREATE TABLE "ItensOrdemPro"(
+    os_cod        integer          NOT NULL,
+    prod_cod      integer         NOT NULL,
+    valor         decimal(10, 2),
+    quantidade    integer,
+    CONSTRAINT "PK27" PRIMARY KEY (os_cod, prod_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: "ItensOrdemSer" 
+--
+
+CREATE TABLE "ItensOrdemSer"(
+    os_cod        integer         NOT NULL,
+    serv_cod      integer          NOT NULL,
+    valor         decimal(10, 2),
+    quantidade    int4,
+    CONSTRAINT "PK28" PRIMARY KEY (os_cod, serv_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: "ItensOrPro" 
+--
+
+CREATE TABLE "ItensOrPro"(
+    orc_cod     integer          NOT NULL,
+    prod_cod    integer          NOT NULL,
+    valor       decimal(10, 2),
+    qtd         int4,
+    CONSTRAINT "PK25" PRIMARY KEY (orc_cod, prod_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: "ItensOrSer" 
+--
+
+CREATE TABLE "ItensOrSer"(
+    orc_cod     integer    NOT NULL,
+    serv_cod    integer    NOT NULL,
+    qtd       int4,
+    Valor     decimal(10,2),
+    CONSTRAINT "PK26" PRIMARY KEY (orc_cod, serv_cod)
+)
+;
+
+-- 
+-- TABLE: orcamento 
+--
+
+CREATE TABLE orcamento(
+    orc_cod         serial       NOT NULL,
+    cli_cod         integer       NOT NULL,
+    dt_orcamento    date,
+    dt_validade     date,
+    valor_tot       decimal(10,2),
+    obsformapg      varchar(20),
+    usr_id          integer           NOT NULL,
+    CONSTRAINT "PK14" PRIMARY KEY (orc_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: ordemservico 
+--
+
+CREATE TABLE ordemservico(
+    os_cod           serial    NOT NULL,
+    orc_cod          integer    NOT NULL,
+    cli_cod          integer    NOT NULL,
+    dt_os            date,
+    dt_fechamento    date,
+    qtd_parcelas     integer,
+    valor_tot        decimal(10,2),
+    usr_id           integer        NOT NULL,
+    CONSTRAINT "PK8" PRIMARY KEY (os_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: produto 
+--
+
+CREATE TABLE produto(
+    prod_cod           serial          NOT NULL,
+    prod_nome          varchar(70)     NOT NULL,
+    prod_quantidade    int4            NOT NULL,
+    prod_preco         decimal(10,2)   NOT NULL,
+    prod_obs           varchar(100),
+    fab_cod            integer        NOT NULL,
+    tip_cod            integer        NOT NULL,
+    CONSTRAINT "PK11" PRIMARY KEY (prod_cod)
+)
+;
+
+create table lote
+(
+	lot_cod integer not null,
+	prod_cod integer not null,
+	lot_tipo varchar(20) not null,
+	lot_desc varchar(50),
+	lot_qtd integer not null,
+	lot_venc date,
+	lot_ent date not null,
+	constraint pk_lote primary key (lot_cod),
+	constraint fk_lote_produto foreign key (prod_cod) references produto
+);
+
+
+
+-- 
+-- TABLE: servico 
+--
+
+CREATE TABLE servico(
+    serv_cod    serial        NOT NULL,
+    ser_nome    varchar(50)     NOT NULL,
+    ser_desc    varchar(100),
+    CONSTRAINT "PK7" PRIMARY KEY (serv_cod)
+)
+;
+
+
+
+-- 
+-- TABLE: tipo 
+--
+
+CREATE TABLE tipo(
+    tip_cod     serial        NOT NULL,
+    tip_nome    varchar(70)     NOT NULL,
+    tip_desc    varchar(150),
+    CONSTRAINT "PK17" PRIMARY KEY (tip_cod)
+)
+;
+
+-- 
+-- TABLE: "contaAreceber" 
+--
+/*
+ALTER TABLE "contaAreceber" ADD CONSTRAINT "Refordemservico41" 
+    FOREIGN KEY (os_cod)
+    REFERENCES ordemservico(os_cod)
+;
+
+ALTER TABLE "contaAreceber" ADD CONSTRAINT "Refvenda85" 
+    FOREIGN KEY (venda_cod)
+    REFERENCES venda(venda_cod)
+;
+*/
+
+
+-- 
+-- TABLE: funcionario 
+--
+/*
+ALTER TABLE funcionario ADD CONSTRAINT "Refgrupo76" 
+    FOREIGN KEY (grupo_id)
+    REFERENCES grupo(grupo_id)
+;
+*/
+
+
+-- 
+-- TABLE: "ItensOrdemPro" 
+--
+
+ALTER TABLE "ItensOrdemPro" ADD CONSTRAINT "Refordemservico48" 
+    FOREIGN KEY (os_cod)
+    REFERENCES ordemservico(os_cod)
+;
+
+ALTER TABLE "ItensOrdemPro" ADD CONSTRAINT "Refproduto49" 
+    FOREIGN KEY (prod_cod)
+    REFERENCES produto(prod_cod)
+;
+
+
+-- 
+-- TABLE: "ItensOrdemSer" 
+--
+
+ALTER TABLE "ItensOrdemSer" ADD CONSTRAINT "Refordemservico50" 
+    FOREIGN KEY (os_cod)
+    REFERENCES ordemservico(os_cod)
+;
+
+ALTER TABLE "ItensOrdemSer" ADD CONSTRAINT "Refservico51" 
+    FOREIGN KEY (serv_cod)
+    REFERENCES servico(serv_cod)
+;
+
+
+-- 
+-- TABLE: "ItensOrPro" 
+--
+
+ALTER TABLE "ItensOrPro" ADD CONSTRAINT "Reforcamento44" 
+    FOREIGN KEY (orc_cod)
+    REFERENCES orcamento(orc_cod)
+;
+
+ALTER TABLE "ItensOrPro" ADD CONSTRAINT "Refproduto45" 
+    FOREIGN KEY (prod_cod)
+    REFERENCES produto(prod_cod)
+;
+
+
+-- 
+-- TABLE: "ItensOrSer" 
+--
+
+ALTER TABLE "ItensOrSer" ADD CONSTRAINT "Reforcamento46" 
+    FOREIGN KEY (orc_cod)
+    REFERENCES orcamento(orc_cod)
+;
+
+ALTER TABLE "ItensOrSer" ADD CONSTRAINT "Refservico47" 
+    FOREIGN KEY (serv_cod)
+    REFERENCES servico(serv_cod)
+;
+-- 
+-- TABLE: orcamento 
+--
+
+ALTER TABLE orcamento ADD CONSTRAINT "Refcliente43" 
+    FOREIGN KEY (cli_cod)
+    REFERENCES cliente(cli_cod)
+;
+
+ALTER TABLE orcamento ADD CONSTRAINT "Reffuncionario68" 
+    FOREIGN KEY (usr_id)
+    REFERENCES funcionario(usr_id)
+;
+
+
+-- 
+-- TABLE: ordemservico 
+--
+
+ALTER TABLE ordemservico ADD CONSTRAINT "Reffuncionario67" 
+    FOREIGN KEY (usr_id)
+    REFERENCES funcionario(usr_id)
+;
+
+ALTER TABLE ordemservico ADD CONSTRAINT "Reforcamento20" 
+    FOREIGN KEY (orc_cod)
+    REFERENCES orcamento(orc_cod)
+;
+
+ALTER TABLE ordemservico ADD CONSTRAINT "Refcliente39" 
+    FOREIGN KEY (cli_cod)
+    REFERENCES cliente(cli_cod)
+;
+
+
+-- 
+-- TABLE: produto 
+--
+
+ALTER TABLE produto ADD CONSTRAINT "Reffabricante2" 
+    FOREIGN KEY (fab_cod)
+    REFERENCES fabricante(fab_cod)
+;
+
+ALTER TABLE produto ADD CONSTRAINT "Reftipo3" 
+    FOREIGN KEY (tip_cod)
+    REFERENCES tipo(tip_cod)
+;
+
+CREATE TABLE fornecedor
+(
+    for_codigo serial NOT NULL,
+    for_nome varchar(50) NOT NULL,
+    for_cnpj varchar(14) NOT NULL,
+    for_email varchar(50) NOT NULL,
+    for_fone varchar(10) NOT NULL,
+    for_site varchar(50),
+    for_contato varchar(50) NOT NULL,
+    for_celular varchar(11),
+    CONSTRAINT for_pk PRIMARY KEY (for_codigo)
+);
+
+create table prateleira
+(
+	pra_cod integer not null,
+	constraint pk_prateleira primary key(pra_cod)
+);
+
+create table compartimento_prateleira
+(
+	comp_cod integer not null,
+	pra_cod integer not null,
+	comp_capacidade integer not null,
+	constraint pk_compartimento primary key(comp_cod,pra_cod),
+	constraint fk_compartimento_prateleira foreign key(pra_cod) references prateleira
+);
